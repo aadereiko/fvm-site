@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { TitlePart } from "./TitlePart";
+import { WhatIs } from "./components/WhatIs/WhatIs";
+import { HowItWorks } from "./components/HowItWorks/HowItWorks";
+import { Transportation } from "./components/Transportation/Transportation";
+import { Seasons } from "./components/Seasons/Seasons";
+import { Merch } from "./components/Merch/Merch";
+import { Orgs } from "./components/Orgs/Orgs";
+import { Footer } from "./components/Footer/Footer";
+import { Button } from "./components/general/Button";
+import { TakePart } from "./components/TakePart/TakePart";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="content">
+        <header>
+          <h3>ФОТОВЕЛОМАРАФОН</h3>
+          <ul>
+            <li>
+              <a href="#about">О ПРОЕКТЕ</a>
+            </li>
+            <li>
+              <a href="#seasons">СЕЗОНЫ</a>
+            </li>
+            <li>
+              <a href="#merch">МЕРЧ</a>
+            </li>
+            <li>
+              <a href="#contacts">ГДЕ НАС ИСКАТЬ</a>
+            </li>
+          </ul>
+          <Button>
+            <span>ЗАРЕГИСТРИРОВАТЬСЯ</span>
+          </Button>
+        </header>
+        <TitlePart />
+        <WhatIs />
+        <HowItWorks />
+        <Transportation />
+        <Seasons />
+        <Merch />
+        <Orgs />
+        <TakePart />
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -1,0 +1,49 @@
+.orgs-wrapper {
+  flex-direction: column;
+  margin: 100px 0px;
+}
+
+.person,
+.person-description,
+.person-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.person-description {
+    margin-top: 10px;
+}
+
+.person-name {
+  color: #1a2845;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.person-role {
+  color: gray;
+}
+
+.person-button {
+    margin-top: 10px;
+}
+
+.person-button button {
+  padding: 10px 20px;
+  width: 125px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #1a2845;
+  color: white;
+  text-align: center;
+}
+
+.orgs-people {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 30px;
+}

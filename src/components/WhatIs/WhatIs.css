@@ -1,0 +1,31 @@
+.what-is-wrapper {
+  display: flex;
+  padding: 100px 0;
+  min-height: 350px;
+}
+
+.what-is-wrapper > .left-part {
+  position: relative;
+  width: 50%;
+}
+
+.border-img {
+  position: absolute;
+  width: 70%;
+}
+
+.camera-img {
+  position: absolute;
+  width: 70%;
+}
+
+.what-is-wrapper > .right-part {
+  width: 50%;
+}
+
+.description {
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 13px;
+    color: #1A2845;
+}

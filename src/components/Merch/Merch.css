@@ -1,0 +1,26 @@
+.merch-wrapper {
+  flex-direction: column;
+  margin: 50px 0px;
+}
+
+.merch-card {
+  width: 25%;
+}
+
+.merch-img {
+  background: #C4C4C4;
+  width: 100%;
+  height: 250px;
+}
+
+.merch-pictures {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.merch-label span {
+  font-weight: 500;
+}

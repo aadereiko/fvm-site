@@ -1,0 +1,15 @@
+.how-it-works-wrapper {
+  padding: 100px 0px;
+}
+
+.steps-wrapper {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 3rem;
+}
+
+.steps-wrapper > div {
+  text-align: center;
+}
