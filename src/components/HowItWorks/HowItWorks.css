@@ -2,7 +2,7 @@
   padding: 100px 0px;
 }
 
-.steps-wrapper {
+.steps-wrapper-desktop {
   margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -10,6 +10,26 @@
   grid-row-gap: 3rem;
 }
 
-.steps-wrapper > div {
+.steps-wrapper-desktop > div {
   text-align: center;
+}
+
+.steps-wrapper-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .steps-wrapper-desktop {
+    display: none;
+  }
+
+  .steps-wrapper-mobile {
+    margin-top: 50px;
+    display: block;
+  }
+
+  .steps-wrapper-mobile > div {
+    margin-top: 10px;
+    text-align: center;
+  }
 }

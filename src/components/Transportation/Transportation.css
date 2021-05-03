@@ -48,3 +48,22 @@
   font-size: 14px;
   color: #1a2845;
 }
+
+@media screen and (max-width: 1000px) {
+  .first-row {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .kind {
+    margin-top: 20px;
+    width: 70%;
+  }
+
+  .second-row {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}

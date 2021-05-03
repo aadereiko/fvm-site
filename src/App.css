@@ -32,3 +32,24 @@
 .content > header > ul > li:hover > a {
   color: gray;
 }
+
+.content > header.mobile-header {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .content > header.mobile-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .content > header.desktop-header {
+    display: none;
+  }
+
+  .content {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+}

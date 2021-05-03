@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <div className="content">
-        <header>
+        <header className="desktop-header">
           <h3>ФОТОВЕЛОМАРАФОН</h3>
           <ul>
             <li>
@@ -31,6 +31,12 @@ function App() {
               <a href="#contacts">ГДЕ НАС ИСКАТЬ</a>
             </li>
           </ul>
+          <Button>
+            <span>ЗАРЕГИСТРИРОВАТЬСЯ</span>
+          </Button>
+        </header>
+        <header className="mobile-header">
+          <h3>ФОТОВЕЛОМАРАФОН</h3>
           <Button>
             <span>ЗАРЕГИСТРИРОВАТЬСЯ</span>
           </Button>
