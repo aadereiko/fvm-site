@@ -10,6 +10,8 @@ import { Orgs } from "./components/Orgs/Orgs";
 import { Footer } from "./components/Footer/Footer";
 import { Button } from "./components/general/Button";
 import { TakePart } from "./components/TakePart/TakePart";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { FAQ } from "./components/FAQ/FAQ";
 
 function App() {
   return (
@@ -19,16 +21,19 @@ function App() {
           <h3>ФОТОВЕЛОМАРАФОН</h3>
           <ul>
             <li>
-              <a href="#about">О ПРОЕКТЕ</a>
+              <AnchorLink href="#about">О ПРОЕКТЕ</AnchorLink>
             </li>
             <li>
-              <a href="#seasons">СЕЗОНЫ</a>
+              <AnchorLink href="#seasons">СЕЗОНЫ</AnchorLink>
             </li>
             <li>
-              <a href="#merch">МЕРЧ</a>
+              <AnchorLink href="#merch">МЕРЧ</AnchorLink>
             </li>
             <li>
-              <a href="#contacts">ГДЕ НАС ИСКАТЬ</a>
+              <AnchorLink href="#contacts">ГДЕ НАС ИСКАТЬ</AnchorLink>
+            </li>
+            <li>
+              <AnchorLink href="#faq">FAQ</AnchorLink>
             </li>
           </ul>
           <Button>
@@ -48,6 +53,7 @@ function App() {
         <Seasons />
         <Merch />
         <Orgs />
+        <FAQ />
         <TakePart />
         <Footer />
       </div>

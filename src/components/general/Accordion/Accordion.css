@@ -1,0 +1,70 @@
+.accordion-title-wrapper {
+  border-top: 1px solid black;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordion-title-wrapper:hover {
+  background-color: rgb(238, 238, 238);
+}
+
+.accordion-title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@keyframes appearing {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rot {
+  from {
+    transform: rotate(-45deg);
+    opacity: 0.7;
+  }
+
+  to {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes disappearing {
+  from {
+    display: block;
+  }
+
+  to {
+    display: none;
+  }
+}
+
+.accordion-content {
+  transition: max-height 1.2s ease-out;
+  padding: 20px 0px 20px 70px;
+  display: none;
+}
+
+.accordion-content.visible {
+  animation: appearing 1.2s;
+  display: block;
+}
+
+.accordion-content.invisible {
+  animation: disappearing 1.2s;
+}
+
+.accordion-icon {
+  padding: 0 20px;
+}
+
+.accordion-icon .svg-icon {
+  animation: rot 1.2s;
+}
