@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.df0951ae.chunk.css",
-    "main.js": "/static/js/main.f8c0f476.chunk.js",
-    "main.js.map": "/static/js/main.f8c0f476.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.1a37a35e.js",
-    "runtime-main.js.map": "/static/js/runtime-main.1a37a35e.js.map",
-    "static/js/2.ae0d1a29.chunk.js": "/static/js/2.ae0d1a29.chunk.js",
-    "static/js/2.ae0d1a29.chunk.js.map": "/static/js/2.ae0d1a29.chunk.js.map",
-    "static/js/3.51c8125e.chunk.js": "/static/js/3.51c8125e.chunk.js",
-    "static/js/3.51c8125e.chunk.js.map": "/static/js/3.51c8125e.chunk.js.map",
+    "main.css": "/static/css/main.09e5fb09.chunk.css",
+    "main.js": "/static/js/main.85247d14.chunk.js",
+    "main.js.map": "/static/js/main.85247d14.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2ebffa44.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2ebffa44.js.map",
+    "static/js/2.1019c814.chunk.js": "/static/js/2.1019c814.chunk.js",
+    "static/js/2.1019c814.chunk.js.map": "/static/js/2.1019c814.chunk.js.map",
+    "static/js/3.21d7e597.chunk.js": "/static/js/3.21d7e597.chunk.js",
+    "static/js/3.21d7e597.chunk.js.map": "/static/js/3.21d7e597.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.df0951ae.chunk.css.map": "/static/css/main.df0951ae.chunk.css.map",
-    "static/js/2.ae0d1a29.chunk.js.LICENSE.txt": "/static/js/2.ae0d1a29.chunk.js.LICENSE.txt",
+    "static/css/main.09e5fb09.chunk.css.map": "/static/css/main.09e5fb09.chunk.css.map",
+    "static/js/2.1019c814.chunk.js.LICENSE.txt": "/static/js/2.1019c814.chunk.js.LICENSE.txt",
+    "static/media/arrow-down.6fc5ad8c.svg": "/static/media/arrow-down.6fc5ad8c.svg",
     "static/media/board.ef7bf758.png": "/static/media/board.ef7bf758.png",
     "static/media/border.b69dc09a.png": "/static/media/border.b69dc09a.png",
     "static/media/byc.ad4695a0.png": "/static/media/byc.ad4695a0.png",
@@ -21,14 +22,15 @@
     "static/media/person_1.a3943258.png": "/static/media/person_1.a3943258.png",
     "static/media/person_2.058b560e.png": "/static/media/person_2.058b560e.png",
     "static/media/person_3.fe81941f.png": "/static/media/person_3.fe81941f.png",
-    "static/media/run.d95a4651.png": "/static/media/run.d95a4651.png",
+    "static/media/plus.86fb3616.svg": "/static/media/plus.86fb3616.svg",
+    "static/media/run.18d04c8b.png": "/static/media/run.18d04c8b.png",
     "static/media/scooter.f4fbaefd.png": "/static/media/scooter.f4fbaefd.png",
     "static/media/skating.482d96e4.png": "/static/media/skating.482d96e4.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.1a37a35e.js",
-    "static/js/2.ae0d1a29.chunk.js",
-    "static/css/main.df0951ae.chunk.css",
-    "static/js/main.f8c0f476.chunk.js"
+    "static/js/runtime-main.2ebffa44.js",
+    "static/js/2.1019c814.chunk.js",
+    "static/css/main.09e5fb09.chunk.css",
+    "static/js/main.85247d14.chunk.js"
   ]
 }
