@@ -7,10 +7,13 @@ export const TitlePart = () => {
     <div className="title-wrapper">
       <div className="left-block">
         <h1 className="part-title">ФОТОВЕЛОМАРАФОН</h1>
-        <h1 className="part-title">МЫ НА КОЛЁСАХ С 2014 ГОДА</h1>
-        <p>Маленькое описание на две длинные строки будет хорошо</p>
-        <p>Ну вот примерно как-то так скорее всего. Хех.</p>
+        <h1 className="part-title">01.01.2001, 19:00</h1>
 
+        <p> Совсем скоро стартует новый сезон, </p>
+        <p>
+          поэтому присоединяйся к ФотоВело, нажав на кнопку
+          «Зарегистрироваться».
+        </p>
         <div className="squares-wrapper">
           <div className="square flex-center">
             <span>20</span>

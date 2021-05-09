@@ -52,4 +52,8 @@
     width: 95%;
     margin-left: 2.5%;
   }
+
+  .part-title {
+    font-size: 30px;
+  }
 }

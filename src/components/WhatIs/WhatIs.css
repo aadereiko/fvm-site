@@ -26,7 +26,7 @@
 .description {
   display: inline-block;
   margin-top: 25px;
-  font-size: 13px;
+  font-size: 16px;
   color: #1a2845;
 }
 
@@ -34,6 +34,7 @@
   .what-is-wrapper {
     display: block;
     min-height: 0px;
+    padding-bottom: 10px;
   }
   .what-is-wrapper > .left-part {
     float: right;

@@ -26,19 +26,25 @@
   color: gray;
 }
 
-.person-button {
+.person-buttons {
   margin-top: 10px;
+  display: flex;
 }
 
-.person-button button {
-  padding: 10px 20px;
-  width: 125px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
+.person-button {
   background-color: #1a2845;
-  color: white;
-  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.person-button {
+  margin-right: 5px;
 }
 
 .orgs-people {

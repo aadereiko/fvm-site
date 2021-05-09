@@ -30,10 +30,10 @@ function App() {
               <AnchorLink href="#merch">МЕРЧ</AnchorLink>
             </li>
             <li>
-              <AnchorLink href="#contacts">ГДЕ НАС ИСКАТЬ</AnchorLink>
+              <AnchorLink href="#faq">FAQ</AnchorLink>
             </li>
             <li>
-              <AnchorLink href="#faq">FAQ</AnchorLink>
+              <AnchorLink href="#contacts">ГДЕ НАС ИСКАТЬ</AnchorLink>
             </li>
           </ul>
           <Button>
