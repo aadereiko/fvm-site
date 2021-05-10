@@ -36,15 +36,19 @@ function App() {
               <AnchorLink href="#contacts">ГДЕ НАС ИСКАТЬ</AnchorLink>
             </li>
           </ul>
-          <Button>
-            <span>ЗАРЕГИСТРИРОВАТЬСЯ</span>
-          </Button>
+          <a href="https://t.me/phvm_bot" target="_blank">
+            <Button>
+              <span>ЗАРЕГИСТРИРОВАТЬСЯ</span>
+            </Button>
+          </a>
         </header>
         <header className="mobile-header">
           <h3>ФОТОВЕЛОМАРАФОН</h3>
-          <Button>
-            <span>ЗАРЕГИСТРИРОВАТЬСЯ</span>
-          </Button>
+          <a href="https://t.me/phvm_bot" target="_blank">
+            <Button>
+              <span>ЗАРЕГИСТРИРОВАТЬСЯ</span>
+            </Button>
+          </a>
         </header>
         <TitlePart />
         <WhatIs />

@@ -43,9 +43,11 @@ export const HowItWorks = () => {
             </div>
           </div>
           <div className="flex-center">
-            <Button>
-              <span>Хочу участвовать</span>
-            </Button>
+            <a href="https://t.me/phvm_bot" target="_blank">
+              <Button>
+                <span>ХОЧУ УЧАСТВОВАТЬ</span>
+              </Button>
+            </a>
           </div>
         </div>
       </div>

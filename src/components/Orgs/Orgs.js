@@ -16,7 +16,7 @@ const orgList = [
     mail: "chekurishvili1marika@gmail.com",
     role: "Руководитель проекта",
     photo: personOneImg,
-    tg: "",
+    tg: "https://t.me/marikachek",
   },
   {
     name: "Ростовцева Дарья",
@@ -25,7 +25,7 @@ const orgList = [
     mail: "dasharostovtseva@gmail.com",
     role: "Специалист по связям с общественностью",
     photo: personTwoImg,
-    tg: "",
+    tg: "https://t.me/Dasha_R1",
   },
   {
     name: "Малцьева Дарья",
@@ -34,7 +34,7 @@ const orgList = [
     mail: "daryamaltseva@gmail.com",
     role: "Специалист по работе с партнёрами",
     photo: personThreeImg,
-    tg: "",
+    tg: "https://t.me/dashs_mac",
   },
 ];
 
@@ -44,7 +44,7 @@ export const Orgs = () => {
       <h1 className="part-title">ОРГАНИЗАТОРЫ</h1>
       <div className="orgs-people">
         {orgList.map((org) => (
-          <div id={org.name} className="person">
+          <div key={org.name} className="person">
             <div className="person-img">
               <img src={org.photo} />
             </div>
@@ -58,7 +58,7 @@ export const Orgs = () => {
                   <InstIcon width="20" height="20" />
                 </div>
               </a>
-              <a href={`https://tg.com/${org.tg}`}>
+              <a href={org.tg}>
                 <div className="person-button">
                   <TgIcon width="20" height="20" fill="white" />
                 </div>
