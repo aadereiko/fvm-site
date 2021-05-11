@@ -18,30 +18,21 @@ export const Transportation = () => {
               <img src={boardImg}></img>
             </div>
             <h3>На скейтборде</h3>
-            <span>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard
-            </span>
+            <span>Для тех, кто хочет пройти маршрут налегке.</span>
           </div>
           <div className="kind flex-center">
             <div className="img-wrapper flex-center">
               <img src={bycImg}></img>
             </div>
             <h3>На велосипеде</h3>
-            <span>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard
-            </span>
+            <span>Для тех, кто любит классику.</span>
           </div>
           <div className="kind flex-center">
             <div className="img-wrapper flex-center">
               <img src={scooterImg}></img>
             </div>
             <h3>На самокате</h3>
-            <span>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard
-            </span>
+            <span>Для тех, кто идёт в ногу со временем.</span>
           </div>
         </div>
         <div className="second-row">
@@ -50,20 +41,14 @@ export const Transportation = () => {
               <img src={skatingImg}></img>
             </div>
             <h3>На роликах</h3>
-            <span>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard
-            </span>
+            <span>Для тех, кто с детства увлекался спортом.</span>
           </div>
           <div className="kind flex-center">
             <div className="img-wrapper flex-center">
               <img src={runImg}></img>
             </div>
             <h3>Бегом</h3>
-            <span>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard
-            </span>
+            <span>Для тех, кто не боится больших расстояний и трудностей.</span>
           </div>
         </div>
       </div>

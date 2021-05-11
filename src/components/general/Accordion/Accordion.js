@@ -25,9 +25,9 @@ export const Accordion = ({ content, title }) => {
       >
         <p className="accordion-icon">
           {isActive ? (
-            <ArrowIcon width="30" height="30" className="svg-icon" />
+            <ArrowIcon width="25" height="25" className="svg-icon" />
           ) : (
-            <PlusIcon width="30" height="30" className="svg-icon" />
+            <PlusIcon width="25" height="25" className="svg-icon" />
           )}
         </p>
         <p className="accordion-title">{title}</p>

@@ -24,7 +24,7 @@ export const TitlePart = () => {
     <div className="title-wrapper">
       <div className="left-block">
         <h1 className="part-title">ФОТОВЕЛОМАРАФОН</h1>
-        <h1 className="part-title">29.05.2021-30.05.2021, 19:00</h1>
+        <h1 className="part-title">29 мая - 30 мая</h1>
 
         <p> Совсем скоро стартует новый сезон, </p>
         <p>

@@ -64,4 +64,8 @@
     align-items: center;
     text-align: center;
   }
+
+  .title-wrapper {
+    padding: 20px;
+  }
 }

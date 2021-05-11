@@ -38,6 +38,11 @@
   border: 1px solid black;
 }
 
+.mech-check svg {
+  position: relative;
+  top: -3px;
+}
+
 .mech-check:hover {
   background-color: rgb(245, 241, 241);
   cursor: pointer;

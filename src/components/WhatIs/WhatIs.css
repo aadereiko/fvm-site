@@ -44,5 +44,8 @@
   .what-is-wrapper > .right-part {
     width: 100%;
   }
-  
+
+  .what-is-wrapper {
+    padding: 30px 0;
+  }
 }
