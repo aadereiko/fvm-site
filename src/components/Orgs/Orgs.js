@@ -28,7 +28,7 @@ const orgList = [
     tg: "https://t.me/Dasha_R1",
   },
   {
-    name: "Малцьева Дарья",
+    name: "Мальцева Дарья",
     inst: "https://www.instagram.com/dasha__maltseva/",
     phone: "+375447503581",
     mail: "daryamaltseva@gmail.com",

@@ -54,7 +54,7 @@ export const Merch = () => {
               <img src={merchImg1}></img>
             </div>
             <div className="merch-label">
-              <span>Черная футболка "красота"</span>
+              <span>Черная футболка "different times" жен</span>
             </div>
             <button className="merch-btn">Подробнее</button>
           </div>
@@ -64,7 +64,7 @@ export const Merch = () => {
               <img src={merchImg2}></img>
             </div>
             <div className="merch-label">
-              <span>Черная футболка "красота"</span>
+              <span>Черная футболка "different times" муж</span>
             </div>
             <button className="merch-btn">Подробнее</button>
           </div>
