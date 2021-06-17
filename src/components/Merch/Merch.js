@@ -1,32 +1,18 @@
-import React from "react";
-import "./Merch.css";
+import React from 'react';
+import { Image } from '../../helpers';
+import { ImagesWrapper, ImagesContainer } from './elements'
+import shoper from '../../assets/images/shoper.png';
+import shirt from '../../assets/images/shirt.png';
 
 export const Merch = () => {
   return (
-    <div className="flex-center merch-wrapper" id="merch">
-      <h1 className="part-title">НАШ МЕРЧ</h1>
-      <div className="merch-pictures">
-        <div className="merch-card">
-          <div className="merch-img"></div>
-          <div className="merch-label">
-            <span>Черная футболка "красота"</span>
-          </div>
-        </div>
-
-        <div className="merch-card">
-          <div className="merch-img"></div>
-          <div className="merch-label">
-            <span>Черная футболка "красота"</span>
-          </div>
-        </div>
-
-        <div className="merch-card">
-          <div className="merch-img"></div>
-          <div className="merch-label">
-            <span>Черная футболка "красота"</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ImagesWrapper>
+      <Image bgImage={shoper} marginRight="32.5px" height="834px" width="1250px"/>
+      <ImagesContainer>
+        <Image bgImage={shoper} height="263px" width="395px"/>
+        <Image bgImage={shirt} marginTop="22px" height="263px" width="395px"/>
+        <Image bgImage={shirt} marginTop="22px" height="263px" width="395px"/>
+      </ImagesContainer>
+    </ImagesWrapper>
   );
 };
