@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ButtonElement = styled.div`
-  max-width: ${props => props.width || ''};
+  width: ${props => props.width || ''};
   padding: 19px 40px;
   margin-top: ${props => props.marginTop || 0}; 
   margin-left: ${props => props.marginLeft || 0}; 
@@ -19,6 +19,10 @@ const ButtonElement = styled.div`
   letter-spacing: ${props => props.space || ''};
   border-radius: 188px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   ${props => props.gradient ? `
   box-sizing: border-box;
   background: linear-gradient(270deg, rgba(32, 50, 218, 0) 0%, rgba(101, 35, 140, 0.21) 48.13%, #AF1238 100%);
