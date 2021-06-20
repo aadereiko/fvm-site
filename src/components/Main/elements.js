@@ -15,11 +15,10 @@ export const Page = styled.div`
 `;
 
 export const PageWrapper = styled.div`
-  background-color: #000000;
-  padding-left: 115px;
-  min-width: 1280px;
+  // background-color: #000000;
+  // padding-left: 115px;
+  // width: 1200px;
   color: #ffffff;
-  background: url(${props => props.bgImage || 'unset'}) no-repeat;
   min-height: ${props => props.height || 'unset'};
   position: relative;
   
@@ -27,6 +26,18 @@ export const PageWrapper = styled.div`
   margin-left: ${props => props.marginLeft || 0}; 
   margin-right: ${props => props.marginRight || 0}; 
   margin-bottom: ${props => props.marginBottom || 0}; 
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: url(${props => props.bgImage || 'unset'});
+    right: 0;
+    top: 0;
+    width: 1120px;
+    height: 720px;
+    z-index: -1;
+
+  }
 `;
 
 export const FlexDiv = styled.div`

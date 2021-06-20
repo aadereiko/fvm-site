@@ -3,15 +3,15 @@ import styled from 'styled-components';
 
 const ButtonElement = styled.div`
   width: ${props => props.width || ''};
-  padding: 19px 40px;
+  padding: 14px 34px;
   margin-top: ${props => props.marginTop || 0}; 
   margin-left: ${props => props.marginLeft || 0}; 
   margin-right: ${props => props.marginRight || 0}; 
   margin-bottom: ${props => props.marginBottom || 0}; 
-  font-size: ${props => props.size || '18px'}; 
-  font-weight: ${props => props.weight || 600};
+  font-size: ${props => props.size || '10px'}; 
+  font-weight: ${props => props.weight || 400};
   font-family: ${props => props.family || 'Montserrat'}, sans-serif;  
-  line-height: ${props => props.height || '22px'};  
+  line-height: ${props => props.height || '12px'};  
   color: ${props => props.color || '#ffffff'};
   text-decoration: ${props => props.decoration || ''};
   text-transform: ${props => props.transform || ''};

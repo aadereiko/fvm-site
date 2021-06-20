@@ -1,6 +1,7 @@
 import React from 'react';
+import { Row, Col, Container } from 'react-bootstrap';
 import { P, Image } from '../../helpers';
-import { TransportContainer, ImageDescription, TransportWrapper } from './elements';
+import { ImageDescription } from './elements';
 import skate from '../../assets/images/skate.png';
 import rolls from '../../assets/images/rolls.png';
 import cross from '../../assets/images/cross.png';
@@ -10,46 +11,52 @@ import velo from '../../assets/images/velo.png';
 
 export const Transport = () => {
   return (
-    <TransportWrapper>
-      <TransportContainer>
-        <ImageDescription>
-          <Image marginRight="30px" bgImage={skate} width="133px" height="133px"/>
-          <div>
-            <P weight="600" size="32px" height="39px">На скейтборде</P>
-            <P marginTop="25px" weight="400" size="24px" height="29px" width="367px">Для тех, кто хочет пройти маршрут налегке.</P>
-          </div>
-        </ImageDescription>
-        <ImageDescription>
-          <Image marginRight="30px" bgImage={rolls} width="133px" height="133px"/>
-          <div>
-            <P weight="600" size="32px" height="39px">На скейтборде</P>
-            <P marginTop="25px" weight="400" size="24px" height="29px" width="367px">Для тех, кто с детства увлекался спортом.</P>
-          </div>
-        </ImageDescription>
-        <ImageDescription>
-          <Image marginRight="30px" bgImage={cross} width="133px" height="133px"/>
-          <div>
-            <P weight="600" size="32px" height="39px">На скейтборде</P>
-            <P marginTop="25px" weight="400" size="24px" height="29px" width="367px">Для тех, кто не боится больших расстояний и трудностей.</P>
-          </div>
-        </ImageDescription>
-      </TransportContainer>
-      <TransportContainer>
-        <ImageDescription>
-          <Image marginRight="30px" bgImage={samo} width="133px" height="133px"/>
-          <div>
-            <P weight="600" size="32px" height="39px">На скейтборде</P>
-            <P marginTop="25px" weight="400" size="24px" height="29px" width="367px">Для тех, кто идёт в ногу со временем.</P>
-          </div>
-        </ImageDescription>
-        <ImageDescription>
-          <Image marginRight="30px" bgImage={velo} width="133px" height="133px"/>
-          <div>
-            <P weight="600" size="32px" height="39px">На скейтборде</P>
-            <P marginTop="25px" weight="400" size="24px" height="29px" width="367px">Для тех, кто любит классику.</P>
-          </div>
-        </ImageDescription>
-      </TransportContainer>
-    </TransportWrapper>
+      <Row>
+        <Col md={4}>
+          <ImageDescription>
+            <Image marginRight="30px" bgImage={skate} width="82px" height="82px"/>
+            <div>
+              <P weight="600" size="22px" height="27px">На скейтборде</P>
+              <P marginTop="7px" weight="400" size="14px" height="17px" width="224px">Для тех, кто хочет пройти маршрут налегке.</P>
+            </div>
+          </ImageDescription>
+        </Col>
+        <Col md={4}>
+          <ImageDescription>
+            <Image marginRight="30px" bgImage={samo} width="82px" height="82px"/>
+            <div>
+              <P weight="600" size="22px" height="27px">На самокате</P>
+              <P marginTop="7px" weight="400" size="14px" height="17px" width="224px">Для тех, кто идёт в ногу со временем.</P>
+            </div>
+          </ImageDescription>
+        </Col>
+        <Col md={4}>
+          <ImageDescription>
+            <Image marginRight="30px" bgImage={cross} width="82px" height="82px"/>
+            <div>
+              <P weight="600" size="22px" height="27px">На своих ногах :)</P>
+              <P marginTop="7px" weight="400" size="14px" height="17px" width="257px">Для тех, кто не боится больших расстояний и трудностей.</P>
+            </div>
+          </ImageDescription>
+        </Col>
+        <Col md={4}>
+          <ImageDescription>
+            <Image marginRight="30px" bgImage={rolls} width="82px" height="82px"/>
+            <div>
+              <P weight="600" size="22px" height="27px">На роликах</P>
+              <P marginTop="7px" weight="400" size="14px" height="17px" width="224px">Для тех, кто с детства увлекался спортом.</P>
+            </div>
+          </ImageDescription> 
+        </Col>
+        <Col md={4}>
+          <ImageDescription>
+            <Image marginRight="30px" bgImage={velo} width="82px" height="82px"/>
+            <div>
+              <P weight="600" size="22px" height="27px">На велосипеде</P>
+              <P marginTop="7px" weight="400" size="14px" height="17px" width="224px">Для тех, кто любит классику.</P>
+            </div>
+          </ImageDescription>
+        </Col>
+      </Row>
   );
 };

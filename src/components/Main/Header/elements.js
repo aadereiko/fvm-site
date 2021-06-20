@@ -37,8 +37,8 @@ export const LiNav = styled.li`
   a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 10px;
+    line-height: 12px;
     cursor: pointer;
     text-decoration: none;
 

@@ -11,7 +11,7 @@ const ImageElement = styled.div`
   margin-right: ${props => props.marginRight || 0}; 
   margin-bottom: ${props => props.marginBottom || 0}; 
 
-  border-radius: 40px;
+  border-radius: 20px;
   position: relative;
 
   background: url(${props => props.bgImage || 'unset'}) no-repeat;
