@@ -8,7 +8,8 @@ import { Transport } from '../Transport';
 import { Seasons } from '../Seasons';
 import { Merch } from '../Merch';
 import { Team } from '../Team';
-import { FAQ} from '../FAQ';
+import { FAQ } from '../FAQ';
+import { Gallery } from '../Gallery';
 import { P, Button } from '../../helpers';
 import bg from '../../assets/images/screen.png';
 
@@ -32,16 +33,19 @@ export const Main = () => {
         <Transport/>
       </PageWrapper>
       <PageWrapper>
-        <P marginBottom="100px" weight="600" size="64px" height="78px">Мерч</P>
+        <P marginBottom="100px" marginLeft="40px" weight="600" size="34px" height="42px">Мерч</P>
         <Merch/>
       </PageWrapper>
       <PageWrapper marginTop="140px">
-        <P marginBottom="100px" weight="600" size="64px" height="78px">Наша команда</P>
+        <P marginBottom="100px" marginLeft="40px" weight="600" size="34px" height="42px">Наша команда</P>
         <Team/>
       </PageWrapper>
       <PageWrapper marginTop="176px">
-        <P marginBottom="100px" weight="600" size="64px" height="78px">У нас часто спрашивают</P>
+        <P marginBottom="100px" marginLeft="40px" weight="600" size="34px" height="42px">У нас часто спрашивают</P>
         <FAQ/>
+      </PageWrapper>
+      <PageWrapper marginTop="176px">
+        <Gallery/>
       </PageWrapper>
     </Container>
     </>

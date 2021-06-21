@@ -20,4 +20,9 @@ export const GlobalStyles = createGlobalStyle`
     .ant-affix {
         transition: all 0.3s ease-in-out;
     }
+
+    .swiper-wrapper {
+        display: flex;
+        align-items: center;
+    }
 `;

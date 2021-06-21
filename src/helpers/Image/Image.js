@@ -15,9 +15,11 @@ const ImageElement = styled.div`
   position: relative;
 
   background: url(${props => props.bgImage || 'unset'}) no-repeat;
-
+  background-size: cover;
   display: flex;
   align-items: flex-end;
+
+  transition: all 0.2s ease-in-out;
 `;
 
 export const Image = (props) => {

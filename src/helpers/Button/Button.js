@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const ButtonElement = styled.div`
   width: ${props => props.width || ''};
-  padding: 14px 34px;
+  padding: 12px 34px;
   margin-top: ${props => props.marginTop || 0}; 
   margin-left: ${props => props.marginLeft || 0}; 
   margin-right: ${props => props.marginRight || 0}; 

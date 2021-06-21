@@ -8,14 +8,14 @@ export const Merch = () => {
   return (
     <>
       <FlexWrapper>
-        <Image bgImage={shoper} marginRight="32.5px" height="834px" width="1250px"/>
+        <Image bgImage={shoper} marginRight="32.5px" height="560px" width="840px"/>
         <ImagesContainer>
-          <Image bgImage={shoper} height="263px" width="395px"/>
-          <Image bgImage={shirt} marginTop="22px" height="263px" width="395px"/>
-          <Image bgImage={shirt} marginTop="22px" height="263px" width="395px"/>
+          <Image bgImage={shoper} height="180px" width="270px"/>
+          <Image bgImage={shirt} marginTop="10px" height="180px" width="270px"/>
+          <Image bgImage={shirt} marginTop="10px" height="180px" width="270px"/>
         </ImagesContainer>
       </FlexWrapper>
-      <P marginTop="50px" weight="400" size="24px" height="30px">Чёрный шоппер «FOTOVELOMARAFON»</P>
+      <P marginTop="50px" weight="400" size="14px" height="17px">Чёрный шоппер «FOTOVELOMARAFON»</P>
       <FlexWrapper>
         <Button width="205px">Купить</Button>
         <MoreButton marginLeft="45px" width="205px">Подробнее</MoreButton>

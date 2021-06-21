@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const ImagesWrapper = styled.div`
+  height: 290px;
   display: flex;
-  margin-top: 30px;
+  align-items: center;
+  margin-top: 10px;
 `;
