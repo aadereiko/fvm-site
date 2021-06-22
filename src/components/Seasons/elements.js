@@ -10,17 +10,23 @@ export const SeasonsWrapper = styled.div`
   color: #fff;
 `;
 
-export const NightBlock = styled.div`
+const Season = styled.div`
   position: absolute;
+`;
+
+export const NightBlock = styled(Season)`
   top: 90px;
   left: 0;
   background: url(${night}) no-repeat;
   width: 628px;
   height: 670px;
+  
+  &:hover {
+  background: url(${spring}) no-repeat;
+  }
 `;
 
-export const SpringBlock = styled.div`
-  position: absolute;
+export const SpringBlock = styled(Season)`
   top: 500px;
   right: 0;
   background: url(${spring}) no-repeat;
@@ -29,8 +35,7 @@ export const SpringBlock = styled.div`
   margin-left: auto;
 `;
 
-export const AutumnBlock = styled.div`
-  position: absolute;
+export const AutumnBlock = styled(Season)`
   top: 0;
   right: 79px;
   background: url(${autumn}) no-repeat;
@@ -38,3 +43,11 @@ export const AutumnBlock = styled.div`
   height: 595px;
   margin-left: auto;
 `;
+
+export const InfoBlock = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+`

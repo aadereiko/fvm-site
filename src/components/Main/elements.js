@@ -27,17 +27,18 @@ export const PageWrapper = styled.div`
   margin-right: ${props => props.marginRight || 0}; 
   margin-bottom: ${props => props.marginBottom || 0}; 
 
-  &:before {
-    content: '';
-    position: absolute;
-    background: url(${props => props.bgImage || 'unset'});
-    right: 0;
-    top: 0;
-    width: 1120px;
-    height: 720px;
-    z-index: -1;
-
-  }
+  ${props => props.bgImage && `
+    &:before {
+      content: '';
+      position: absolute;
+      background: url(${props.bgImage});
+      right: 0;
+      top: 0;
+      width: 1120px;
+      height: 720px;
+      z-index: -1;
+    }
+  `};
 `;
 
 export const FlexDiv = styled.div`

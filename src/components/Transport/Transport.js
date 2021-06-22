@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { P, Image } from '../../helpers';
 import { ImageDescription } from './elements';
 import skate from '../../assets/images/skate.png';

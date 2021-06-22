@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap'
 
 import { Header } from './Header';
+import { Footer } from './Footer';
 import { PageWrapper } from './elements';
 import { Description } from '../Description';
 import { Transport } from '../Transport';
@@ -24,30 +25,31 @@ export const Main = () => {
         <Button marginTop="93px" width="137px">Регистрация</Button>
         <Button marginTop="14px" marginBottom="240px" gradient={true} width="258px">5 дней, 15 часов, 12 минут, 40 секунд</Button>
       </PageWrapper>
-      <PageWrapper marginTop="30px">
+      <PageWrapper id="about" marginTop="30px">
         <Description/>
       </PageWrapper>
-      <Seasons/>
       <PageWrapper>
         <P marginBottom="80px" marginLeft="40px" weight="600" size="34px" height="42px">На чём можно участвовать</P>
         <Transport/>
       </PageWrapper>
-      <PageWrapper>
+      <Seasons id="seasons"/>
+      <PageWrapper marginTop="176px" marginBottom="180px">
+        <Gallery/>
+      </PageWrapper>
+      <PageWrapper id="merch">
         <P marginBottom="100px" marginLeft="40px" weight="600" size="34px" height="42px">Мерч</P>
         <Merch/>
       </PageWrapper>
-      <PageWrapper marginTop="140px">
+      <PageWrapper id="team" marginTop="140px">
         <P marginBottom="100px" marginLeft="40px" weight="600" size="34px" height="42px">Наша команда</P>
         <Team/>
       </PageWrapper>
-      <PageWrapper marginTop="176px">
+      <PageWrapper id="faq" marginTop="176px">
         <P marginBottom="100px" marginLeft="40px" weight="600" size="34px" height="42px">У нас часто спрашивают</P>
         <FAQ/>
       </PageWrapper>
-      <PageWrapper marginTop="176px">
-        <Gallery/>
-      </PageWrapper>
     </Container>
+    <Footer/>
     </>
   );
 };

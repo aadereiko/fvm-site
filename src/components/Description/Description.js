@@ -1,4 +1,4 @@
-import React, { useState, dangerouslySetInnerHTML } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { P, Image } from '../../helpers';
 import { ImagesWrapper } from './elements'
@@ -111,8 +111,8 @@ export const Description = () => {
             onSlideChange={(e) => setCurrentSlide(e.realIndex)}
           >
             {
-              SlideInfo.map(slide => 
-                <SwiperSlide>
+              SlideInfo.map((slide, index) => 
+                <SwiperSlide key={index}>
                   {({ isActive }) => slideRender({...slide, isActive })}
                 </SwiperSlide>
               )

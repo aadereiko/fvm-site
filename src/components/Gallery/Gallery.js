@@ -1,12 +1,12 @@
-import React, { useState, dangerouslySetInnerHTML } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { P, Image } from '../../helpers';
+import React, { useState } from 'react';
+import { Container } from 'react-bootstrap';
+import { P } from '../../helpers';
 import { ImagesWrapper, SwiperImage } from './elements'
 import photo1 from '../../assets/images/gal-1.png';
 import photo2 from '../../assets/images/photo-2.png';
 import photo3 from '../../assets/images/photo-3.png';
 
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, EffectFade, EffectCoverflow, EffectFlip, EffectCube  } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -34,6 +34,18 @@ export const Gallery = () => {
     {
       title: "Награждение",
       photo: photo3,
+    },
+    {
+      title: "Механика",
+      photo: photo1,
+    },
+    {
+      title: "Финиш",
+      photo: photo2,
+    },
+    {
+      title: "Награждение",
+      photo: photo3,
     }
   ]
 
@@ -41,9 +53,6 @@ export const Gallery = () => {
   const slideRender = (info) => {
     return (
       <SwiperImage isActive={info.isActive} isPrev={info.isPrev} isNext={info.isNext} bgImage={info.photo}>
-        <div>
-          <P weight="500" size="18px" height="22px">{info.title}</P>
-        </div>
       </SwiperImage>
       )
   }
@@ -72,6 +81,7 @@ export const Gallery = () => {
             }
           </Swiper>
         </ImagesWrapper>
+          <P align="center" weight={400} size="14px" height="17px">{ SlideInfo[currentSlide].title }</P>
       </Container>
     </>
   );

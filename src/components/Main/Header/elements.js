@@ -1,7 +1,13 @@
 import styled from 'styled-components';
+import { Anchor } from 'antd';
 
 export const HeaderDiv = styled.div`
   display: flex;
+  justify-content: center;
+`;
+
+export const AnchorElement = styled(Anchor)`
+  transition: all 0.3s ease-in-out;
 `;
 
 export const HeaderWrapper = styled.div`
@@ -11,13 +17,24 @@ export const HeaderWrapper = styled.div`
   z-index: 100;
   transform: ${props => props.hide ? `translate(0%,-100%)` : ''};
   transition: all 0.3s ease-in-out;
+  background-color: ${props => props.colored ? "#000000" : ''};
 `;
 
 export const UlNav = styled.ul`
   display: flex;
+  justify-content: center;
   list-style: none;
-  margin: 40px auto 0;
+  margin: 20px auto;
   padding: 0;
+
+  .ant-anchor-link-active {
+      /* background: linear-gradient(225deg, #89DD65 0%, #AEDD65 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; */
+      a {
+        color: #BA1629;
+      }
+  }
 `;
 
 export const LiNav = styled.li`
