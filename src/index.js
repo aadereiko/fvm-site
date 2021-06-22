@@ -9,7 +9,7 @@ import './index.css';
 export const ScrollProvider = React.createContext();
 let viewport = document.querySelector("meta[name=viewport]");
 let width = document.documentElement.clientWidth;
-viewport.setAttribute('content', `width=${width > 1200 ? 1920 : 1200} initial-scale=1`);
+viewport.setAttribute('content', `width=${width > 1200 ? 1920 : 1200}`);
 ReactDOM.render(
     <React.StrictMode>
         <App />
