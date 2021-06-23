@@ -29,7 +29,13 @@ export const Header = () => {
                 <Link href={`#seasons`} title='Сезоны'/>
               </LiNav>
               <LiNav>
+                <Link href={`#tasks`} title='Фотозадания'/>
+              </LiNav>
+              <LiNav>
                 <Link href={`#merch`} title='Мерч'/>
+              </LiNav>
+              <LiNav>
+                <Link href={`#team`} title='Команда'/>
               </LiNav>
               <LiNav>
                 <Link href={`#faq`} title='FAQ'/>

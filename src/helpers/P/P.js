@@ -26,6 +26,7 @@ const PElement = styled.p`
     // -webkit-text-fill-color: transparent;
     color: #89DD65;
   `}
+
 `;
 
 export const P = (props) => {

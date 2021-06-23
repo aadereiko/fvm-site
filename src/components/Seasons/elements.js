@@ -8,7 +8,7 @@ import autumnHover from '../../assets/images/autumn-hover.png';
 
 export const SeasonsWrapper = styled.div`
   position: relative;
-  margin-top: 187px;
+  margin-top: 80px;
   height: 1200px;
   color: #fff;
 `;
@@ -40,7 +40,7 @@ export const NightBlock = styled(Season)`
 `;
 
 export const SpringBlock = styled(Season)`
-  top: 500px;
+  top: 520px;
   right: 0;
   background: url(${spring}) no-repeat;
   width: 702px;
@@ -58,7 +58,7 @@ export const SpringBlock = styled(Season)`
 
 export const AutumnBlock = styled(Season)`
   top: 0;
-  right: 79px;
+  right: 20px;
   background: url(${autumn}) no-repeat;
   width: 616px;
   height: 595px;

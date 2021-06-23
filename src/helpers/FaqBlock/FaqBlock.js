@@ -12,6 +12,10 @@ const FaqBlockElement = styled.div`
   cursor: pointer;
   display: inline-block;
   transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    background: linear-gradient(267.86deg, #3443CD -38.73%, #E02323 144.05%);
+  }
 
   &::after {
     content: '';
@@ -45,7 +49,7 @@ export const FaqBlock = (props) => {
     return (
       <FaqWrapper {...props}>
         <FaqBlockElement open={open} onClick={(e) => handleChange(e)}>
-          <P weight="400" size="14px" height="17px">{props.title}</P>
+          <P weight="400" size="16px" height="19px">{props.title}</P>
           {open && props.children}
       </FaqBlockElement>
       </FaqWrapper>

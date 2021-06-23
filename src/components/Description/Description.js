@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { P, Image } from '../../helpers';
-import { ImagesWrapper } from './elements'
+import { ImagesWrapper, TextWrapper } from './elements'
 import photo1 from '../../assets/images/photo-1.png';
 import photo2 from '../../assets/images/photo-2.png';
 import photo3 from '../../assets/images/photo-3.png';
 import photo4 from '../../assets/images/photo-4.png';
 import photo5 from '../../assets/images/photo-5.png';
 
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -19,7 +19,7 @@ import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
 
 // install Swiper modules
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay ]);
 export const Description = () => {
   const [currentSlide, setCurrentSlide ] = useState(0);
 
@@ -83,11 +83,16 @@ export const Description = () => {
       <Row>
         <Col md={12}>
           <Image bgImage={SlideInfo[currentSlide].photo} height="720px">
-            <div> 
+            <TextWrapper> 
               <P weight="500" size="24px" height="29px">{SlideInfo[currentSlide].title}</P>
-              <P marginTop="14px" paddingBottom="40px" weight="400" size="14px" width="750px" height="17px" dangerouslySetInnerHTML={{ __html: SlideInfo[currentSlide].info }}>
+              <P 
+              paddingTop="14px" 
+              paddingBottom="40px" 
+              weight="400" size="14px"
+              width="750px" height="17px" 
+              dangerouslySetInnerHTML={{ __html: SlideInfo[currentSlide].info }}>
               </P>
-            </div>
+            </TextWrapper>
           </Image>
         </Col>
       </Row>
@@ -101,6 +106,7 @@ export const Description = () => {
             centeredSlides={true}
             preloadImages={true}
             loopedSlides={30}
+            autoplay={{delay: 3000}}
             onSlideChange={(e) => setCurrentSlide(e.realIndex)}
           >
             {

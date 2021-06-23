@@ -17,8 +17,8 @@ export const Merch = () => {
       </FlexWrapper>
       <P marginTop="50px" weight="400" size="14px" height="17px">Чёрный шоппер «FOTOVELOMARAFON»</P>
       <FlexWrapper>
-        <Button width="205px">Купить</Button>
-        <MoreButton marginLeft="45px" width="205px">Подробнее</MoreButton>
+        <a href="https://www.instagram.com/fotovelomarafon/" target="__blank"><Button width="205px">Купить</Button></a>
+        {/* <MoreButton marginLeft="45px" width="205px">Подробнее</MoreButton> */}
       </FlexWrapper>
     </>
   );

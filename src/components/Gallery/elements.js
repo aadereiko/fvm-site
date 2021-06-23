@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Image } from '../../helpers';
 
 export const ImagesWrapper = styled.div`
-  height: 830px;
+  height: 730px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -6,3 +6,7 @@ export const ImagesWrapper = styled.div`
   align-items: center;
   margin-top: 10px;
 `;
+
+export const TextWrapper = styled.div`
+  margin-top:auto;
+`;

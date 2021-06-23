@@ -79,10 +79,10 @@ export const Main = () => {
       <PageWrapper bgImage={bg} height="720px">
         <P paddingTop="157px" weight="600" size="80px" height="80px" width="404px">Время проявить себя</P>
         <P marginTop="12px" weight="400" size="16px" height="19px">26-27 июня</P>
-        <Button marginTop="93px" width="137px">Регистрация</Button>
-        <Button marginTop="14px" marginBottom="240px" gradient={true} width="270px">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
+        <a href="https://t.me/phvm_bot"><Button size="16px" height="18px" marginTop="93px" width="170px">Регистрация</Button></a>
+        <Button marginTop="14px" marginBottom="240px" size="16px" height="12px" gradient={true} width="400px">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
       </PageWrapper>
-      <PageWrapper id="about" marginTop="30px">
+      <PageWrapper id="about" marginTop="30px" height="1100px">
         <Description/>
       </PageWrapper>
       <PageWrapper>
@@ -90,19 +90,20 @@ export const Main = () => {
         <Transport/>
       </PageWrapper>
       <Seasons id="seasons"/>
-      <PageWrapper marginTop="176px" marginBottom="180px">
+      <PageWrapper id="tasks" marginTop="80px" marginBottom="80px">
+        <P marginBottom="20px" marginLeft="40px" weight="600" size="34px" height="42px">Прошлые фотозадания</P>
         <Gallery/>
       </PageWrapper>
       <PageWrapper id="merch">
-        <P marginBottom="100px" marginLeft="40px" weight="600" size="34px" height="42px">Мерч</P>
+        <P marginBottom="40px" marginLeft="40px" weight="600" size="34px" height="42px">Мерч</P>
         <Merch/>
       </PageWrapper>
-      <PageWrapper id="team" marginTop="140px">
-        <P marginBottom="100px" marginLeft="40px" weight="600" size="34px" height="42px">Наша команда</P>
+      <PageWrapper id="team" marginTop="80px">
+        <P marginBottom="40px" marginLeft="40px" weight="600" size="34px" height="42px">Наша команда</P>
         <Team/>
       </PageWrapper>
-      <PageWrapper id="faq" marginTop="176px">
-        <P marginBottom="100px" marginLeft="40px" weight="600" size="34px" height="42px">У нас часто спрашивают</P>
+      <PageWrapper id="faq" marginTop="86px" height="600px">
+        <P marginBottom="40px" marginLeft="40px" weight="600" size="34px" height="42px">У нас часто спрашивают</P>
         <FAQ/>
       </PageWrapper>
     </Container>
