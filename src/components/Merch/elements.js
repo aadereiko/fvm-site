@@ -15,4 +15,11 @@ export const MoreButton = styled(Button)`
   background: none;
   color: #676767; 
   border: 2px solid #676767;
+
+  &:hover {
+    background: #161616;
+    border: 2px solid #676767;
+    box-sizing: border-box;
+    border-radius: 40px;
+  }
 `;
