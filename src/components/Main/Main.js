@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap'
+import { useMediaQuery } from 'react-responsive'
 
 import { Header } from './Header';
 import { Footer } from './Footer';
@@ -11,7 +12,7 @@ import { Merch } from '../Merch';
 import { Team } from '../Team';
 import { FAQ } from '../FAQ';
 import { Gallery } from '../Gallery';
-import { P, Button } from '../../helpers';
+import { P, Button, Image } from '../../helpers';
 import bg from '../../assets/images/screen.png';
 
 const getTimeRemaining = () => {
@@ -72,42 +73,76 @@ export const Main = () => {
     setTimeout(() => setCounter(getTimeRemaining()), 1000);
   }, [counter]);
 
+  const isLaptop = useMediaQuery({query: '(min-width: 768px)'});
+
   return (
     <>
-    <Header/>
+    {isLaptop && <Header/>}
     <Container>
-      <PageWrapper bgImage={bg} height="720px">
-        <P paddingTop="157px" weight="600" size="80px" height="80px" width="404px">Время проявить себя</P>
-        <P marginTop="12px" weight="400" size="16px" height="19px">26-27 июня</P>
-        <a href="https://t.me/phvm_bot"><Button size="16px" height="18px" marginTop="93px" width="170px">Регистрация</Button></a>
-        <Button marginTop="14px" marginBottom="240px" size="16px" height="12px" gradient={true} width="400px">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
-      </PageWrapper>
-      <PageWrapper id="about" marginTop="30px" height="1100px">
-        <Description/>
+      {isLaptop ? 
+          <PageWrapper bgImage={bg} height="720px">
+            <P paddingTop="157px" weight="600" size="80px" height="80px" width="404px">Время проявить себя</P>
+            <P marginTop="12px" weight="400" size="16px" height="19px">26-27 июня</P>
+            <a href="https://t.me/phvm_bot"><Button size="16px" height="18px" marginTop="93px" width="170px">Регистрация</Button></a>
+            <Button marginTop="14px" marginBottom="240px" size="16px" height="12px" gradient={true} width="400px">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
+          </PageWrapper>
+        :
+        <>
+          <PageWrapper isMobile={!isLaptop} >
+            <Image bgImage={bg} contain={true} height="320px"/>
+            <P paddingTop="20px" weight="600" size="30px" height="40px" width="100%" align="center">Время проявить себя</P>
+            <P marginTop="12px" weight="400" size="16px" height="19px" align="center">26-27 июня</P>
+            <a href="https://t.me/phvm_bot"><Button weight="600" size="16px" height="18px" marginTop="10px" width="170px" marginLeft="auto" marginRight="auto">Регистрация</Button></a>
+            <Button marginTop="14px" marginBottom="40px" size="11px" height="12px" gradient={true} width="100%">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
+          </PageWrapper>
+        </>
+    }
+      <PageWrapper  id="about" marginTop="30px">
+        <Description isLaptop={isLaptop}/>
       </PageWrapper>
       <PageWrapper>
-        <P marginBottom="80px" marginLeft="40px" weight="600" size="34px" height="42px">На чём можно участвовать</P>
-        <Transport/>
+        {isLaptop ? 
+            <P paddingTop="80px" marginBottom="80px" marginLeft="40px" weight="600" size="34px" height="42px">На чём можно участвовать</P>
+          :
+            <P paddingTop="30px" marginBottom="20px" weight="500" size="16px" height="18px" align="center">На чём можно участвовать</P>
+      }
+        <Transport isLaptop={isLaptop}/>
       </PageWrapper>
-      <Seasons id="seasons"/>
+      <Seasons id="seasons" isLaptop={isLaptop}/>
       <PageWrapper id="tasks" marginTop="80px" marginBottom="80px">
-        <P marginBottom="20px" marginLeft="40px" weight="600" size="34px" height="42px">Прошлые фотозадания</P>
-        <Gallery/>
+        {isLaptop ? 
+          <P marginBottom="20px" marginLeft="40px" weight="600" size="34px" height="42px">Прошлые фотозадания</P>
+          :
+          <P marginBottom="20px" align="center" weight="600" size="20px" height="24px">Прошлые фотозадания</P>
+        }
+        <Gallery isLaptop={isLaptop}/>
       </PageWrapper>
       <PageWrapper id="merch">
-        <P marginBottom="40px" marginLeft="40px" weight="600" size="34px" height="42px">Мерч</P>
-        <Merch/>
+        {isLaptop ? 
+          <P marginBottom="40px" marginLeft="40px" weight="600" size="34px" height="42px">Мерч</P>
+          :
+          <P marginBottom="20px" align="center" weight="600" size="20px" height="24px">Мерч</P>
+        }
+        <Merch isLaptop={isLaptop}/>
       </PageWrapper>
       <PageWrapper id="team" marginTop="80px">
-        <P marginBottom="40px" marginLeft="40px" weight="600" size="34px" height="42px">Наша команда</P>
-        <Team/>
+        {isLaptop ? 
+          <P marginBottom="40px" marginLeft="40px" weight="600" size="34px" height="42px">Наша команда</P>
+          :
+          <P marginBottom="20px" align="center" weight="600" size="20px" height="24px">Наша команда</P>
+        }
+        <Team isLaptop={isLaptop}/>
       </PageWrapper>
-      <PageWrapper id="faq" marginTop="86px" height="600px">
-        <P marginBottom="40px" marginLeft="40px" weight="600" size="34px" height="42px">У нас часто спрашивают</P>
-        <FAQ/>
+      <PageWrapper id="faq" marginTop="86px" height={isLaptop && "600px"}>
+        {isLaptop ? 
+          <P marginBottom="40px" marginLeft="40px" weight="600" size="34px" height="42px">У нас часто спрашивают</P>
+          :
+          <P marginBottom="10px" align="center" weight="600" size="20px" height="24px">У нас часто спрашивают</P>
+        }
+        <FAQ isLaptop={isLaptop}/>
       </PageWrapper>
     </Container>
-    <Footer/>
+    <Footer isLaptop={isLaptop}/>
     </>
   );
 };

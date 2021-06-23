@@ -40,7 +40,7 @@ import image23 from '../../assets/images/photos/image-31.png';
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
-export const Gallery = () => {
+export const Gallery = ({isLaptop}) => {
   const [currentSlide, setCurrentSlide ] = useState(4);
 
   const SlideInfo = [
@@ -141,18 +141,17 @@ export const Gallery = () => {
 
   const slideRender = (info) => {
     return (
-      <SwiperImage isActive={info.isActive} isPrev={info.isPrev} isNext={info.isNext} bgImage={info.photo}>
+      <SwiperImage isLaptop={isLaptop} isActive={info.isActive} isPrev={info.isPrev} isNext={info.isNext} bgImage={info.photo}>
       </SwiperImage>
       )
   }
-
   return (
     <>
       <Container className="mt-3">
         <ImagesWrapper>
           <Swiper
             spaceBetween={10}
-            slidesPerView={3}
+            slidesPerView={isLaptop ? 3 : 1}
             navigation
             loop={true}
             draggable={false}
@@ -160,7 +159,7 @@ export const Gallery = () => {
             allowTouchMove={false}
             centeredSlides={true}
             autoplay={{delay: 3000}}
-            loopedSlides={50}
+            loopedSlides={isLaptop ? 50 : 23}
             onSlideChange={(e) => setCurrentSlide(e.realIndex)}
           >
             {
@@ -172,7 +171,7 @@ export const Gallery = () => {
             }
           </Swiper>
         </ImagesWrapper>
-          <P align="center" weight={400} size="26px" height="17px">{ SlideInfo[currentSlide].title }</P>
+          <P marginTop="10px" align="center" weight={400} size="14px" height="17px">{ SlideInfo[currentSlide].title || '' }</P>
       </Container>
     </>
   );

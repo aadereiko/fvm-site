@@ -7,8 +7,20 @@ export const TeamWrapper = styled.div`
   display: flex;
 `;
 
+export const MobileWrapper = styled.div`
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const PersonContainer = styled.div`
   margin-right: ${props => props.margin ? '172px' : ''};
+  ${props => props.isMobile && `
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+  `}
 `;
 
 export const Tg = styled.a`

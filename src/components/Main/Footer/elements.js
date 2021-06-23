@@ -10,20 +10,29 @@ export const FooterWrapper = styled.div`
 `;
 
 export const UlNav = styled.ul`
-  display: flex;
   list-style: none;
-  margin: 20px auto;
-  justify-content: center;
   padding: 0;
+  display: flex;
+  ${props => props.isLaptop ? `
+    margin: 20px auto;
+    justify-content: center;
+  ` : `
+    flex-direction: column;
+    align-items: center;
+  `}
 `;
 
 export const LiNav = styled.li`
-  margin-right: 75px;
-  color: #ffffff;
+  ${props => props.isLaptop ? `
+      margin-right: 75px;
 
-  &:last-child {
-    margin-right: 0;
-  }
+      &:last-child {
+        margin-right: 0;
+      }
+  ` : `
+    margin-top: 5px;
+  `}
+  color: #ffffff;
 
   a {
     font-family: 'Montserrat', sans-serif;

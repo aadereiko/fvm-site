@@ -9,54 +9,108 @@ import samo from '../../assets/images/samo.png';
 import velo from '../../assets/images/velo.png';
 
 
-export const Transport = () => {
+export const Transport = ({isLaptop}) => {
   return (
-      <Row>
-        <Col md={4}>
-          <ImageDescription>
-            <Image marginRight="30px" bgImage={skate} width="82px" height="82px"/>
-            <div>
-              <P weight="600" size="22px" height="27px">На скейтборде</P>
-              <P marginTop="7px" weight="400" size="14px" height="17px" width="224px">Для тех, кто хочет пройти маршрут налегке.</P>
-            </div>
-          </ImageDescription>
-        </Col>
-        <Col md={4}>
-          <ImageDescription>
-            <Image marginRight="30px" bgImage={samo} width="82px" height="82px"/>
-            <div>
-              <P weight="600" size="22px" height="27px">На самокате</P>
-              <P marginTop="7px" weight="400" size="14px" height="17px" width="224px">Для тех, кто идёт в ногу со временем.</P>
-            </div>
-          </ImageDescription>
-        </Col>
-        <Col md={4}>
-          <ImageDescription>
-            <Image marginRight="30px" bgImage={cross} width="82px" height="82px"/>
-            <div>
-              <P weight="600" size="22px" height="27px">На своих ногах :)</P>
-              <P marginTop="7px" weight="400" size="14px" height="17px" width="257px">Для тех, кто не боится больших расстояний и трудностей.</P>
-            </div>
-          </ImageDescription>
-        </Col>
-        <Col md={4}>
-          <ImageDescription>
-            <Image marginRight="30px" bgImage={rolls} width="82px" height="82px"/>
-            <div>
-              <P weight="600" size="22px" height="27px">На роликах</P>
-              <P marginTop="7px" weight="400" size="14px" height="17px" width="224px">Для тех, кто с детства увлекался спортом.</P>
-            </div>
-          </ImageDescription> 
-        </Col>
-        <Col md={4}>
-          <ImageDescription>
-            <Image marginRight="30px" bgImage={velo} width="82px" height="82px"/>
-            <div>
-              <P weight="600" size="22px" height="27px">На велосипеде</P>
-              <P marginTop="7px" weight="400" size="14px" height="17px" width="224px">Для тех, кто любит классику.</P>
-            </div>
-          </ImageDescription>
-        </Col>
+    <>
+    {isLaptop ? 
+        <Row>
+          <Col md={4}>
+            <ImageDescription>
+              <Image marginRight="30px" bgImage={skate} width="82px" height="82px" />
+              <div>
+                <P weight="600" size="22px" height="27px">На скейтборде</P>
+                <P marginTop="7px" weight="400" size="14px" height="17px" width="224px">Для тех, кто хочет пройти маршрут налегке.</P>
+              </div>
+            </ImageDescription>
+          </Col>
+          <Col md={4}>
+            <ImageDescription>
+              <Image marginRight="30px" bgImage={samo} width="82px" height="82px"/>
+              <div>
+                <P weight="600" size="22px" height="27px">На самокате</P>
+                <P marginTop="7px" weight="400" size="14px" height="17px" width="224px">Для тех, кто идёт в ногу со временем.</P>
+              </div>
+            </ImageDescription>
+          </Col>
+          <Col md={4}>
+            <ImageDescription>
+              <Image marginRight="30px" bgImage={cross} width="82px" height="82px"/>
+              <div>
+                <P weight="600" size="22px" height="27px">На своих ногах :)</P>
+                <P marginTop="7px" weight="400" size="14px" height="17px" width="257px">Для тех, кто не боится больших расстояний и трудностей.</P>
+              </div>
+            </ImageDescription>
+          </Col>
+          <Col md={4}>
+            <ImageDescription>
+              <Image marginRight="30px" bgImage={rolls} width="82px" height="82px"/>
+              <div>
+                <P weight="600" size="22px" height="27px">На роликах</P>
+                <P marginTop="7px" weight="400" size="14px" height="17px" width="224px">Для тех, кто с детства увлекался спортом.</P>
+              </div>
+            </ImageDescription> 
+          </Col>
+          <Col md={4}>
+            <ImageDescription>
+              <Image marginRight="30px" bgImage={velo} width="82px" height="82px"/>
+              <div>
+                <P weight="600" size="22px" height="27px">На велосипеде</P>
+                <P marginTop="7px" weight="400" size="14px" height="17px" width="224px">Для тех, кто любит классику.</P>
+              </div>
+            </ImageDescription>
+          </Col>
       </Row>
+    :
+    <>
+        <Row>
+          <Col md={4}>
+            <ImageDescription isMobile={!isLaptop}>
+              <Image bgImage={skate} width='54px' height='54px' />
+              <div>
+                <P paddingLeft="10px" weight="600" size="16px" height="18px">На скейтборде</P>
+                <P paddingLeft="10px" marginTop="5px" weight="400" size="10px" height="12px" width="100%">Для тех, кто хочет пройти маршрут налегке.</P>
+              </div>
+            </ImageDescription>
+          </Col>
+          <Col md={4}>
+            <ImageDescription isMobile={!isLaptop}>
+              <Image bgImage={samo} width='54px' height='54px'/>
+              <div>
+                <P paddingLeft="10px" weight="600" size="16px" height="18px">На самокате</P>
+                <P paddingLeft="10px" marginTop="7px" weight="400" size="10px" height="12px" width="200px">Для тех, кто идёт в ногу со временем.</P>
+              </div>
+            </ImageDescription>
+          </Col>
+          <Col md={4}>
+            <ImageDescription isMobile={!isLaptop}>
+              <Image bgImage={cross} width='54px' height='54px'/>
+              <div>
+                <P paddingLeft="10px" weight="600" size="16px" height="18px">На своих ногах :)</P>
+                <P paddingLeft="10px" marginTop="7px" weight="400" size="10px" height="12px" width="200px">Для тех, кто не боится больших расстояний и трудностей.</P>
+              </div>
+            </ImageDescription>
+          </Col>
+          <Col md={4}>
+            <ImageDescription isMobile={!isLaptop}>
+              <Image bgImage={rolls} width='54px' height='54px'/>
+              <div>
+                <P paddingLeft="10px" weight="600" size="16px" height="18px">На роликах</P>
+                <P paddingLeft="10px" marginTop="7px" weight="400" size="10px" height="12px" width="200px">Для тех, кто с детства увлекался спортом.</P>
+              </div>
+            </ImageDescription> 
+          </Col>
+          <Col md={4}>
+            <ImageDescription isMobile={!isLaptop}>
+              <Image bgImage={velo} width='54px' height='54px'/>
+              <div>
+                <P paddingLeft="10px" weight="600" size="16px" height="18px">На велосипеде</P>
+                <P paddingLeft="10px" marginTop="7px" weight="400" size="10px" height="12px" width="200px">Для тех, кто любит классику.</P>
+              </div>
+            </ImageDescription>
+          </Col>
+      </Row>
+    </>
+    }
+    </>
   );
 };

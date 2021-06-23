@@ -31,11 +31,12 @@ export const PageWrapper = styled.div`
     &:before {
       content: '';
       position: absolute;
-      background: url(${props.bgImage});
+      background: url(${props.bgImage}) no-repeat;
+      background-size: contain;
       right: 0;
       top: 0;
-      width: 1120px;
-      height: 720px;
+      width: ${props.mobile ? '100%' : '90%'};
+      height: ${props.height || ''};
       z-index: -1;
     }
   `};

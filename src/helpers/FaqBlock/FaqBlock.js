@@ -49,7 +49,7 @@ export const FaqBlock = (props) => {
     return (
       <FaqWrapper {...props}>
         <FaqBlockElement open={open} onClick={(e) => handleChange(e)}>
-          <P weight="400" size="16px" height="19px">{props.title}</P>
+          <P weight="400" size={props.isMobile ? "12px" : "16px"} height="19px">{props.title}</P>
           {open && props.children}
       </FaqBlockElement>
       </FaqWrapper>

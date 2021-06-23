@@ -20,7 +20,8 @@ import 'swiper/components/scrollbar/scrollbar.scss';
 
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay ]);
-export const Description = () => {
+
+export const Description = ({isLaptop}) => {
   const [currentSlide, setCurrentSlide ] = useState(0);
 
   const SlideInfo = [
@@ -64,25 +65,32 @@ export const Description = () => {
     }
   ]
 
+  const getHeight = () => {
+    return isLaptop ? '250px' : '200px';
+  }
 
   const slideRender = (info) => {
     // if(info.isActive && currentSlide.title !== info.title) {
     //   setCurrentSlide(info)
     // } 
     return (
-      <Image isActive={info.isActive} bgImage={info.photo} height={info.isActive ? "250px" : "210px"}>
-        <div>
-          <P weight="500" size="18px" height="22px">{info.title}</P>
-        </div>
-      </Image>
+      <>
+        <Image isLaptop={isLaptop} isActive={info.isActive} bgImage={info.photo} height={info.isActive ? getHeight() : "210px"}>
+          <div>
+            <P weight="500" size="18px" height="22px" width="100%" align={!isLaptop && 'center'}>{info.title}</P>
+          </div>
+        </Image>
+      </>
       )
   }
 
   return (
     <>
+    {isLaptop ? 
+    <>
       <Row>
         <Col md={12}>
-          <Image bgImage={SlideInfo[currentSlide].photo} height="720px">
+          <Image isLaptop={isLaptop} bgImage={SlideInfo[currentSlide].photo} height="720px">
             <TextWrapper> 
               <P weight="500" size="24px" height="29px">{SlideInfo[currentSlide].title}</P>
               <P 
@@ -119,6 +127,36 @@ export const Description = () => {
           </Swiper>
         </ImagesWrapper>
       </Container>
+    </>
+    :
+    <>
+      <Container className="mt-3">
+        <ImagesWrapper>
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={1}
+            navigation
+            loop={true}
+            centeredSlides={true}
+            preloadImages={true}
+            loopedSlides={30}
+            autoplay={{delay: 3000}}
+            onSlideChange={(e) => setCurrentSlide(e.realIndex)}
+          >
+            {
+              SlideInfo.map((slide, index) => 
+                <SwiperSlide key={index}>
+                  {({ isActive }) => slideRender({...slide, isActive })}
+                </SwiperSlide>
+              )
+            }
+          </Swiper>
+        </ImagesWrapper>
+          <P size="10px" height="12px" blockHeight="260px" dangerouslySetInnerHTML={{ __html: SlideInfo[currentSlide].info }}></P>
+      </Container>
+    </>
+  
+    }
     </>
   );
 };
