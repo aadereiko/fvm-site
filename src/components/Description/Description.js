@@ -87,75 +87,75 @@ export const Description = ({isLaptop}) => {
   return (
     <>
     {isLaptop ? 
-    <>
-      <Row>
-        <Col md={12}>
-          <Image isLaptop={isLaptop} bgImage={SlideInfo[currentSlide].photo} height="720px">
-            <TextWrapper> 
-              <P weight="500" size="24px" height="29px">{SlideInfo[currentSlide].title}</P>
-              <P 
-              paddingTop="14px" 
-              paddingBottom="40px" 
-              weight="400" size="14px"
-              width="750px" height="17px" 
-              dangerouslySetInnerHTML={{ __html: SlideInfo[currentSlide].info }}>
-              </P>
-            </TextWrapper>
-          </Image>
-        </Col>
-      </Row>
-      <Container className="mt-3">
-        <ImagesWrapper>
-          <Swiper
-            spaceBetween={10}
-            slidesPerView={3}
-            navigation
-            loop={true}
-            centeredSlides={true}
-            preloadImages={true}
-            loopedSlides={30}
-            autoplay={{delay: 3000}}
-            onSlideChange={(e) => setCurrentSlide(e.realIndex)}
-          >
+      <>
+        <Row>
+          <Col md={12}>
+            <Image isLaptop={isLaptop} bgImage={SlideInfo[currentSlide].photo} height="720px">
+              <TextWrapper> 
+                <P weight="500" size="24px" height="29px">{SlideInfo[currentSlide].title}</P>
+                <P 
+                paddingTop="14px" 
+                paddingBottom="40px" 
+                weight="400" size="14px"
+                width="750px" height="17px" 
+                dangerouslySetInnerHTML={{ __html: SlideInfo[currentSlide].info }}>
+                </P>
+              </TextWrapper>
+            </Image>
+          </Col>
+        </Row>
+        <Container className="mt-3">
+          <ImagesWrapper>
+            <Swiper
+              spaceBetween={10}
+              slidesPerView={3}
+              navigation
+              loop={true}
+              centeredSlides={true}
+              preloadImages={true}
+              loopedSlides={30}
+              autoplay={{delay: 3000}}
+              onSlideChange={(e) => setCurrentSlide(e.realIndex)}
+            >
+              {
+                SlideInfo.map((slide, index) => 
+                  <SwiperSlide key={index}>
+                    {({ isActive }) => slideRender({...slide, isActive })}
+                  </SwiperSlide>
+                )
+              }
+            </Swiper>
+          </ImagesWrapper>
+        </Container>
+      </>
+      :
+      <>
+        <Container>
+          <Row className="justify-content-center" xs={{cols: 2}}>
             {
               SlideInfo.map((slide, index) => 
-                <SwiperSlide key={index}>
-                  {({ isActive }) => slideRender({...slide, isActive })}
-                </SwiperSlide>
+                <Col key={index} onClick={() => setModalShow({active: true, info: slide.info, title: slide.title})}>
+                  <MobileImage src={slide.photo}/>
+                  <P marginTop="2px" marginBottom="15px" weight="600" size="12px" height="14px" align="center">{modalShow.title}</P>
+                </Col>
               )
             }
-          </Swiper>
-        </ImagesWrapper>
-      </Container>
-    </>
-    :
-    <>
-      <Container>
-        <Row className="justify-content-center" xs={{cols: 2}}>
-          {
-            SlideInfo.map((slide, index) => 
-              <Col key={index} onClick={() => setModalShow({active: true, info: slide.info, title: slide.title})}>
-                <MobileImage src={slide.photo}/>
-                <P marginTop="2px" marginBottom="15px" weight="600" size="12px" height="14px" align="center">{modalShow.title}</P>
-              </Col>
-            )
-          }
-        </Row>
-      </Container>
-      <Modal
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-        show={modalShow.active}
-        onHide={() => setModalShow(false)}
-      >
-        <StyledModalHeader closeButton>
-          <StyledModalTitle>{modalShow.title}</StyledModalTitle>
-        </StyledModalHeader>
-        <StyledModalBody dangerouslySetInnerHTML={{ __html: modalShow.info }}>
-        </StyledModalBody>
-      </Modal>
-    </>
+          </Row>
+        </Container>
+        <Modal
+          size="lg"
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+          show={modalShow.active}
+          onHide={() => setModalShow(false)}
+        >
+          <StyledModalHeader closeButton>
+            <StyledModalTitle>{modalShow.title}</StyledModalTitle>
+          </StyledModalHeader>
+          <StyledModalBody dangerouslySetInnerHTML={{ __html: modalShow.info }}>
+          </StyledModalBody>
+        </Modal>
+      </>
     }
     </>
   );
