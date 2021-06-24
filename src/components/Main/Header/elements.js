@@ -32,7 +32,7 @@ export const UlNav = styled.ul`
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; */
       a {
-        color: #BA1629;
+        color: #3443CD;
       }
   }
 `;

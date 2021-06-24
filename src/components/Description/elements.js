@@ -24,16 +24,29 @@ export const MobileImage = styled.img`
 `;
 
 export const StyledModalBody = styled(Modal.Body)`
-  background: #000000;
+  /* background: #000000; */
   color: #ffffff;
 `;
 
 export const StyledModalHeader = styled(Modal.Header)`
-  background: #000000;
+  /* background: #000000; */
   color: #ffffff;
-  /* height: 30px; */
+
+  .close {
+    color: #fff;
+    opacity: 1;
+    text-shadow: none;
+  }
 `;
 
 export const StyledModalTitle = styled(Modal.Title)`
   color: #ffffff;
+`;
+
+export const StyledModal = styled(Modal)`
+.modal-content{
+  background: #000000;
+  border: solid 1px #3443CD;
+  border-radius: 10px;
+}
 `;

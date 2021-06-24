@@ -23,3 +23,9 @@ export const MoreButton = styled(Button)`
     border-radius: 40px;
   }
 `;
+
+export const Photo = styled.img`
+  width: 100%;
+  border-radius: 20px;
+  margin: 10px 0;
+`;

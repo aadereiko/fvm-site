@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Modal } from 'react-bootstrap';
 import { P, Image } from '../../helpers';
-import { ImagesWrapper, TextWrapper, MobileTextWrapper, MobileImage, StyledModalBody, StyledModalHeader, StyledModalTitle } from './elements'
+import { ImagesWrapper, TextWrapper, StyledModal, MobileImage, StyledModalBody, StyledModalHeader, StyledModalTitle } from './elements'
 import photo1 from '../../assets/images/photo-1.png';
 import photo2 from '../../assets/images/photo-2.png';
 import photo3 from '../../assets/images/photo-3.png';
@@ -36,8 +36,8 @@ export const Description = ({isLaptop}) => {
     },
     {
       title: "Механика",
-      info: `Летний ФотоВело 2021 - это юбилейный сезон, который проводится в онлайн-формате.
-      Основная часть марафона длится 2 дня: 26 и 27 июня. Участники выбирают 1 из этих дней и в своем темпе передвигаются по локациям и делают снимки. До основной части марафона можно проходить задания, которые позволят открыть карту раньше, а не в официальный день начала марафона.
+      info: `Летний ФотоВело 2021 - это юбилейный сезон, который проводится в онлайн-формате.<br><br>
+      Основная часть марафона длится 2 дня: 26 и 27 июня. Участники выбирают 1 из этих дней и в своем темпе передвигаются по локациям и делают снимки. До основной части марафона можно проходить задания, которые позволят открыть карту раньше, а не в официальный день начала марафона.<br><br>
       Это позволит простроить маршрут заранее для большего комфорта.`,
       photo: photo1,
     },
@@ -55,12 +55,12 @@ export const Description = ({isLaptop}) => {
     },
     {
       title: "Финиш",
-      info: `Когда участники выполнили все фотозадания, то следующий шаг – отправить все работы своему куратору. Всё, теперь можно ехать отдыхать и ждать результатов, которые будут озвучены на награждении. `,
+      info: `Когда участники выполнили все фотозадания, то следующий шаг – отправить все работы своему куратору.<br><br>Всё, теперь можно ехать отдыхать и ждать результатов, которые будут озвучены на награждении. `,
       photo: photo2,
     },
     {
       title: "Награждение",
-      info: `Для всех желающих организовывается просмотр фотографий с обсуждением, где каждый может рассказать историю создания своего фото. После завершения слайд шоу проходит награждение победителей. Определяются они с помощью компетентного жюри, которое напрямую связаны с фотографией и самим проектом.`,
+      info: `Для всех желающих организовывается просмотр фотографий с обсуждением, где каждый может рассказать историю создания своего фото.<br><br>После завершения слайд шоу проходит награждение победителей.<br><br>Определяются они с помощью компетентного жюри, которое напрямую связаны с фотографией и самим проектом.`,
       photo: photo3,
     }
   ]
@@ -136,13 +136,13 @@ export const Description = ({isLaptop}) => {
               SlideInfo.map((slide, index) => 
                 <Col key={index} onClick={() => setModalShow({active: true, info: slide.info, title: slide.title})}>
                   <MobileImage src={slide.photo}/>
-                  <P marginTop="2px" marginBottom="15px" weight="600" size="12px" height="14px" align="center">{modalShow.title}</P>
+                  <P marginTop="2px" marginBottom="15px" weight="600" size="12px" height="14px" align="center">{slide.title}</P>
                 </Col>
               )
             }
           </Row>
         </Container>
-        <Modal
+        <StyledModal
           size="lg"
           aria-labelledby="contained-modal-title-vcenter"
           centered
@@ -154,7 +154,7 @@ export const Description = ({isLaptop}) => {
           </StyledModalHeader>
           <StyledModalBody dangerouslySetInnerHTML={{ __html: modalShow.info }}>
           </StyledModalBody>
-        </Modal>
+        </StyledModal>
       </>
     }
     </>
