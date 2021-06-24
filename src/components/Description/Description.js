@@ -130,42 +130,13 @@ export const Description = ({isLaptop}) => {
     </>
     :
     <>
-      {/* <Container className="mt-3">
-        <ImagesWrapper>
-          <Swiper
-            spaceBetween={10}
-            slidesPerView={1}
-            navigation
-            loop={true}
-            centeredSlides={true}
-            preloadImages={true}
-            loopedSlides={30}
-            autoplay={{delay: 3000}}
-            onSlideChange={(e) => setCurrentSlide(e.realIndex)}
-          >
-            {
-              SlideInfo.map((slide, index) => 
-                <SwiperSlide key={index}>
-                  {({ isActive }) => slideRender({...slide, isActive })}
-                </SwiperSlide>
-              )
-            }
-          </Swiper>
-        </ImagesWrapper>
-        <MobileTextWrapper blockHeight="300px">
-          <P size="11px" height="13px" dangerouslySetInnerHTML={{ __html: SlideInfo[currentSlide].info }}></P>
-        </MobileTextWrapper>
-
-
-      </Container> */}
-
       <Container>
         <Row className="justify-content-center" xs={{cols: 2}}>
           {
             SlideInfo.map((slide, index) => 
               <Col key={index} onClick={() => setModalShow({active: true, info: slide.info, title: slide.title})}>
                 <MobileImage src={slide.photo}/>
-                <P marginTop="2px" marginBottom="15px" weight="600" size="12px" height="14px" align="center"></P>
+                <P marginTop="2px" marginBottom="15px" weight="600" size="12px" height="14px" align="center">{modalShow.title}</P>
               </Col>
             )
           }
@@ -183,9 +154,8 @@ export const Description = ({isLaptop}) => {
         </StyledModalHeader>
         <StyledModalBody dangerouslySetInnerHTML={{ __html: modalShow.info }}>
         </StyledModalBody>
-    </Modal>
+      </Modal>
     </>
-  
     }
     </>
   );
