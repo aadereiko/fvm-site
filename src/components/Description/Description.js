@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Modal } from 'react-bootstrap';
 import { P, Image } from '../../helpers';
-import { ImagesWrapper, TextWrapper } from './elements'
+import { ImagesWrapper, TextWrapper, MobileTextWrapper, MobileImage, StyledModalBody } from './elements'
 import photo1 from '../../assets/images/photo-1.png';
 import photo2 from '../../assets/images/photo-2.png';
 import photo3 from '../../assets/images/photo-3.png';
@@ -23,6 +23,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay ]);
 
 export const Description = ({isLaptop}) => {
   const [currentSlide, setCurrentSlide ] = useState(0);
+  const [modalShow, setModalShow] = useState({active: false, info: '', title: ''})
 
   const SlideInfo = [
     {
@@ -54,13 +55,12 @@ export const Description = ({isLaptop}) => {
     },
     {
       title: "Финиш",
-      info: `Когда участники выполнили все фотозадания, то они отправляются на финиш,
-      где организаторы фиксируют их время и проверяют наличие всех выполненных фотографий по темам. После участники могут расслабиться на специально оборудованной зоне для отдыха.`,
+      info: `Когда участники выполнили все фотозадания, то следующий шаг – отправить все работы своему куратору. Всё, теперь можно ехать отдыхать и ждать результатов, которые будут озвучены на награждении. `,
       photo: photo2,
     },
     {
       title: "Награждение",
-      info: `На следующий день для всех желающих организовывается просмотр фотографий с обсуждением, где каждый может рассказать историю создания своего фото. После завершения слайд шоу проходит награждение победителей. Определяются они с помощью компетентного жюри, которое напрямую связаны с фотографией и самим проектом.`,
+      info: `Для всех желающих организовывается просмотр фотографий с обсуждением, где каждый может рассказать историю создания своего фото. После завершения слайд шоу проходит награждение победителей. Определяются они с помощью компетентного жюри, которое напрямую связаны с фотографией и самим проектом.`,
       photo: photo3,
     }
   ]
@@ -130,7 +130,7 @@ export const Description = ({isLaptop}) => {
     </>
     :
     <>
-      <Container className="mt-3">
+      {/* <Container className="mt-3">
         <ImagesWrapper>
           <Swiper
             spaceBetween={10}
@@ -152,8 +152,39 @@ export const Description = ({isLaptop}) => {
             }
           </Swiper>
         </ImagesWrapper>
-          <P size="10px" height="12px" blockHeight="260px" dangerouslySetInnerHTML={{ __html: SlideInfo[currentSlide].info }}></P>
+        <MobileTextWrapper blockHeight="300px">
+          <P size="11px" height="13px" dangerouslySetInnerHTML={{ __html: SlideInfo[currentSlide].info }}></P>
+        </MobileTextWrapper>
+
+
+      </Container> */}
+
+      <Container>
+        <Row className="justify-content-center" xs={{cols: 2}}>
+          {
+            SlideInfo.map((slide, index) => 
+              <Col key={index} onClick={() => setModalShow({active: true, info: slide.info, title: slide.title})}>
+                <MobileImage src={slide.photo}/>
+                <P marginTop="2px" marginBottom="15px" weight="600" size="12px" height="14px" align="center" dangerouslySetInnerHTML={{ __html: slide.title }}></P>
+              </Col>
+            )
+          }
+        </Row>
       </Container>
+      <Modal
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        show={modalShow.active}
+        onHide={() => setModalShow(false)}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>{modalShow.title}</Modal.Title>
+        </Modal.Header>
+        <StyledModalBody>
+          {modalShow.info}
+        </StyledModalBody>
+    </Modal>
     </>
   
     }

@@ -15,9 +15,10 @@ import { Gallery } from '../Gallery';
 import { P, Button, Image } from '../../helpers';
 import bg from '../../assets/images/screen.png';
 
+import "bootstrap/dist/css/bootstrap.min.css";
+
 const getTimeRemaining = () => {
   var t = Date.parse(new Date(2021,5,26,9)) - Date.parse(new Date());
-  console.log(new Date(2021,5,26,9), new Date())
   var seconds = Math.floor((t / 1000) % 60);
   var minutes = Math.floor((t / 1000 / 60) % 60);
   var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
@@ -95,7 +96,7 @@ export const Main = () => {
                 <P paddingTop="20px" weight="600" size="30px" height="40px" width="100%" align="center">Время проявить себя</P>
                 <P marginTop="12px" weight="400" size="16px" height="19px" align="center">26-27 июня</P>
                 <a href="https://t.me/phvm_bot"><Button weight="600" size="16px" height="18px" marginTop="10px" width="170px" marginLeft="auto" marginRight="auto">Регистрация</Button></a>
-                <Button marginTop="14px" marginBottom="40px" size="11px" height="12px" gradient={true} width="100%">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
+                <Button marginTop="14px" size="11px" height="12px" gradient={true} width="100%">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
               </div>
           </PageWrapper>
         </>
@@ -112,7 +113,7 @@ export const Main = () => {
         <Transport isLaptop={isLaptop}/>
       </PageWrapper>
       <Seasons id="seasons" isLaptop={isLaptop}/>
-      <PageWrapper id="tasks" marginTop="80px" marginBottom="80px">
+      <PageWrapper id="tasks" marginTop={isLaptop ? "80px" : "30px"} marginBottom={isLaptop ? "80px" : "30px"}>
         {isLaptop ? 
           <P marginBottom="20px" marginLeft="40px" weight="600" size="34px" height="42px">Прошлые фотозадания</P>
           :
@@ -128,7 +129,7 @@ export const Main = () => {
         }
         <Merch isLaptop={isLaptop}/>
       </PageWrapper>
-      <PageWrapper id="team" marginTop="80px">
+      <PageWrapper id="team" marginTop={isLaptop ? "80px" : "30px"}>
         {isLaptop ? 
           <P marginBottom="40px" marginLeft="40px" weight="600" size="34px" height="42px">Наша команда</P>
           :
@@ -136,7 +137,7 @@ export const Main = () => {
         }
         <Team isLaptop={isLaptop}/>
       </PageWrapper>
-      <PageWrapper id="faq" marginTop="86px" height={isLaptop && "600px"}>
+      <PageWrapper id="faq" marginTop={isLaptop ? "86px" : "30px"} height={isLaptop && "600px"}>
         {isLaptop ? 
           <P marginBottom="40px" marginLeft="40px" weight="600" size="34px" height="42px">У нас часто спрашивают</P>
           :

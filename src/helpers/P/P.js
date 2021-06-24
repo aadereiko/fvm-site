@@ -26,7 +26,10 @@ const PElement = styled.p`
     // -webkit-text-fill-color: transparent;
     color: #89DD65;
   `}
-  height: ${props => props.blockHeight || ''}
+  height: ${props => props.blockHeight || ''};
+  li {
+    margin-top: 5px;
+  }
 `;
 
 export const P = (props) => {

@@ -15,7 +15,8 @@ export const Page = styled.div`
 `;
 
 export const FirstImage = styled.img`
-  
+  width: 100%;
+  height: auto;
 `;
 
 export const PageWrapper = styled.div`
