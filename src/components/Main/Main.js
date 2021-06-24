@@ -4,7 +4,7 @@ import { useMediaQuery } from 'react-responsive'
 
 import { Header } from './Header';
 import { Footer } from './Footer';
-import { PageWrapper } from './elements';
+import { PageWrapper, FirstImage } from './elements';
 import { Description } from '../Description';
 import { Transport } from '../Transport';
 import { Seasons } from '../Seasons';
@@ -89,11 +89,14 @@ export const Main = () => {
         :
         <>
           <PageWrapper isMobile={!isLaptop} >
-            <Image bgImage={bg} contain={true} height="320px"/>
-            <P paddingTop="20px" weight="600" size="30px" height="40px" width="100%" align="center">Время проявить себя</P>
-            <P marginTop="12px" weight="400" size="16px" height="19px" align="center">26-27 июня</P>
-            <a href="https://t.me/phvm_bot"><Button weight="600" size="16px" height="18px" marginTop="10px" width="170px" marginLeft="auto" marginRight="auto">Регистрация</Button></a>
-            <Button marginTop="14px" marginBottom="40px" size="11px" height="12px" gradient={true} width="100%">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
+            <FirstImage src={bg} contain={true} height="340px">
+            </FirstImage>   
+              <div>
+                <P paddingTop="20px" weight="600" size="30px" height="40px" width="100%" align="center">Время проявить себя</P>
+                <P marginTop="12px" weight="400" size="16px" height="19px" align="center">26-27 июня</P>
+                <a href="https://t.me/phvm_bot"><Button weight="600" size="16px" height="18px" marginTop="10px" width="170px" marginLeft="auto" marginRight="auto">Регистрация</Button></a>
+                <Button marginTop="14px" marginBottom="40px" size="11px" height="12px" gradient={true} width="100%">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
+              </div>
           </PageWrapper>
         </>
     }

@@ -14,6 +14,10 @@ export const Page = styled.div`
   margin-bottom: 40px;
 `;
 
+export const FirstImage = styled.img`
+  
+`;
+
 export const PageWrapper = styled.div`
   // background-color: #000000;
   // padding-left: 115px;
