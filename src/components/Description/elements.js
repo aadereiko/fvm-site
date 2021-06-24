@@ -33,3 +33,7 @@ export const StyledModalHeader = styled(Modal.Header)`
   color: #ffffff;
   height: 30px;
 `;
+
+export const StyledModalTitle = styled(Modal.Title)`
+  color: #ffffff;
+`;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Modal } from 'react-bootstrap';
 import { P, Image } from '../../helpers';
-import { ImagesWrapper, TextWrapper, MobileTextWrapper, MobileImage, StyledModalBody } from './elements'
+import { ImagesWrapper, TextWrapper, MobileTextWrapper, MobileImage, StyledModalBody, StyledModalHeader, StyledModalTitle } from './elements'
 import photo1 from '../../assets/images/photo-1.png';
 import photo2 from '../../assets/images/photo-2.png';
 import photo3 from '../../assets/images/photo-3.png';
@@ -165,7 +165,7 @@ export const Description = ({isLaptop}) => {
             SlideInfo.map((slide, index) => 
               <Col key={index} onClick={() => setModalShow({active: true, info: slide.info, title: slide.title})}>
                 <MobileImage src={slide.photo}/>
-                <P marginTop="2px" marginBottom="15px" weight="600" size="12px" height="14px" align="center" dangerouslySetInnerHTML={{ __html: slide.title }}></P>
+                <P marginTop="2px" marginBottom="15px" weight="600" size="12px" height="14px" align="center"></P>
               </Col>
             )
           }
@@ -178,11 +178,10 @@ export const Description = ({isLaptop}) => {
         show={modalShow.active}
         onHide={() => setModalShow(false)}
       >
-        <Modal.Header closeButton>
-          <Modal.Title>{modalShow.title}</Modal.Title>
-        </Modal.Header>
-        <StyledModalBody>
-          {modalShow.info}
+        <StyledModalHeader closeButton>
+          <StyledModalTitle>{modalShow.title}</StyledModalTitle>
+        </StyledModalHeader>
+        <StyledModalBody dangerouslySetInnerHTML={{ __html: modalShow.info }}>
         </StyledModalBody>
     </Modal>
     </>
