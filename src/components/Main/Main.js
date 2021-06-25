@@ -18,7 +18,7 @@ import bg from '../../assets/images/screen.png';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const getTimeRemaining = () => {
-  var t = Date.parse(new Date(2021,5,26,9)) - Date.parse(new Date());
+  var t = Date.parse(new Date(2021,5,25,9)) - Date.parse(new Date());
   var seconds = Math.floor((t / 1000) % 60);
   var minutes = Math.floor((t / 1000 / 60) % 60);
   var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
@@ -85,7 +85,13 @@ export const Main = () => {
             <P paddingTop="157px" weight="600" size="80px" height="80px" width="404px">Время проявить себя</P>
             <P marginTop="12px" weight="400" size="16px" height="19px">26-27 июня</P>
             <a href="https://t.me/phvm_bot"><Button size="16px" height="18px" marginTop="93px" width="170px">Регистрация</Button></a>
-            <Button marginTop="14px" marginBottom="240px" size="16px" height="12px" gradient={true} width="400px">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
+            {
+              counter.total > 0 ? 
+                <Button marginTop="14px" marginBottom="240px" size="16px" height="12px" gradient={true} width="400px">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
+              :
+                <Button marginTop="14px" marginBottom="240px" size="16px" height="12px" gradient={true} width="400px">Регистрация завершена</Button>
+            }
+
           </PageWrapper>
         :
         <>
@@ -96,7 +102,12 @@ export const Main = () => {
                 <P paddingTop="20px" weight="600" size="30px" height="40px" width="100%" align="center">Время проявить себя</P>
                 <P marginTop="12px" weight="400" size="16px" height="19px" align="center">26-27 июня</P>
                 <a href="https://t.me/phvm_bot"><Button weight="600" size="16px" height="18px" marginTop="10px" width="170px" marginLeft="auto" marginRight="auto">Регистрация</Button></a>
-                <Button marginTop="14px" size="11px" height="12px" gradient={true} width="100%">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
+                {
+                  counter.total > 0 ? 
+                  <Button marginTop="14px" size="11px" height="12px" gradient={true} width="100%">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
+                  :
+                  <Button marginTop="14px" size="11px" height="12px" gradient={true} width="100%">Регистрация завершена</Button>
+                }
               </div>
           </PageWrapper>
         </>
