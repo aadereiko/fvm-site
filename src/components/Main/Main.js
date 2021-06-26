@@ -84,12 +84,16 @@ export const Main = () => {
           <PageWrapper bgImage={bg} height="720px">
             <P paddingTop="157px" weight="600" size="80px" height="80px" width="404px">Время проявить себя</P>
             <P marginTop="12px" weight="400" size="16px" height="19px">26-27 июня</P>
-            <a href="https://t.me/phvm_bot"><Button size="16px" height="18px" marginTop="93px" width="170px">Регистрация</Button></a>
             {
               counter.total > 0 ? 
-                <Button marginTop="14px" marginBottom="240px" size="16px" height="12px" gradient={true} width="400px">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
+                <>
+                  <a href="https://t.me/phvm_bot"><Button size="16px" height="18px" marginTop="93px" width="170px">Регистрация</Button></a>
+                  <Button marginTop="14px" marginBottom="240px" size="16px" height="12px" gradient={true} width="400px">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
+                </>
               :
-                <Button marginTop="14px" marginBottom="240px" size="16px" height="12px" gradient={true} width="400px">Регистрация завершена</Button>
+              <>
+                <a style={{textDecoration: 'none'}} href="https://www.instagram.com/fotovelomarafon/" target="_blank"><Button decoration="none" size="16px" height="18px" marginTop="93px" width="340px">Регистрация завершена</Button></a>
+              </>
             }
 
           </PageWrapper>
@@ -101,12 +105,16 @@ export const Main = () => {
               <div>
                 <P paddingTop="20px" weight="600" size="30px" height="40px" width="100%" align="center">Время проявить себя</P>
                 <P marginTop="12px" weight="400" size="16px" height="19px" align="center">26-27 июня</P>
-                <a href="https://t.me/phvm_bot"><Button weight="600" size="16px" height="18px" marginTop="10px" width="170px" marginLeft="auto" marginRight="auto">Регистрация</Button></a>
                 {
-                  counter.total > 0 ? 
-                  <Button marginTop="14px" size="11px" height="12px" gradient={true} width="100%">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
+                  counter.total > 0 ?
+                  <> 
+                    <a href="https://t.me/phvm_bot"><Button weight="600" size="16px" height="18px" marginTop="10px" width="170px" marginLeft="auto" marginRight="auto">Регистрация</Button></a>
+                    <Button marginTop="14px" size="11px" height="12px" gradient={true} width="100%">{getTimeName(counter.days, 'day')}, {getTimeName(counter.hours, 'hour')}, {getTimeName(counter.minutes, 'minute')}, {getTimeName(counter.seconds, 'seconds')}</Button>
+                  </>
                   :
-                  <Button marginTop="14px" size="11px" height="12px" gradient={true} width="100%">Регистрация завершена</Button>
+                  <>
+                    <a style={{textDecoration: 'none'}} href="https://www.instagram.com/fotovelomarafon/" target="_blank"><Button weight="600" size="16px" height="18px" marginTop="10px" width="320px" marginLeft="auto" marginRight="auto">Регистрация завершена</Button></a>
+                  </>
                 }
               </div>
           </PageWrapper>
